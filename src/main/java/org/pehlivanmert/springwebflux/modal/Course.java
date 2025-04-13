@@ -4,6 +4,7 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.pehlivanmert.springwebflux.modal.metadata.CourseMetadata;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.annotation.Transient;
 import org.springframework.data.domain.Persistable;
@@ -28,7 +29,7 @@ public class Course implements Serializable, Persistable<UUID> {
     private Integer duration;
     private String teacher;
 
-    private CourseMetaData courseMetaData;
+    private CourseMetadata courseMetadata;
 
     @Transient
     private boolean isUpdated = false;

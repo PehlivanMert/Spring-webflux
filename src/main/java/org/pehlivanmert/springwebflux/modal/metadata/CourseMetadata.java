@@ -16,8 +16,8 @@ import lombok.experimental.SuperBuilder;
 @JsonTypeInfo(use = JsonTypeInfo.Id.NAME, property = "type")
 @JsonSubTypes(
         {
-                @JsonSubTypes.Type(value = SpringCourseMetadata.class, name = CourseConstants.SPRING_COURSE_TYPE),
-                @JsonSubTypes.Type(value = EnglishCourseMetadata.class, name = CourseConstants.ENGLISH_COURSE_TYPE),
+                @JsonSubTypes.Type(value = SpringCourseMetadata.class, name = CourseConstant.SPRING_COURSE_TYPE),
+                @JsonSubTypes.Type(value = EnglishCourseMetadata.class, name = CourseConstant.ENGLISH_COURSE_TYPE),
         }
 )
 @SuperBuilder
