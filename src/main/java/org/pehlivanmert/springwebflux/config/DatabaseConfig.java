@@ -7,6 +7,8 @@ import io.r2dbc.pool.ConnectionPoolConfiguration;
 import io.r2dbc.postgresql.PostgresqlConnectionConfiguration;
 import io.r2dbc.postgresql.PostgresqlConnectionFactory;
 import io.r2dbc.spi.ConnectionFactory;
+import org.pehlivanmert.springwebflux.config.converter.CourseMetadataToJsonConverter;
+import org.pehlivanmert.springwebflux.config.converter.JsonToCourseMetadataConverter;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.autoconfigure.flyway.FlywayProperties;
 import org.springframework.boot.autoconfigure.r2dbc.R2dbcProperties;
@@ -38,7 +40,7 @@ public class DatabaseConfig extends AbstractR2dbcConfiguration {
     @Value("5435")
     private int port;
 
-    @Value("springwebflux")
+    @Value("webfluxdb")
     private String database;
 
     @Value("public")

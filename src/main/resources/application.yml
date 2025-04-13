@@ -12,12 +12,18 @@ spring-webflux:
       max: 10
 
 spring:
+  r2dbc:
+    url: r2dbc:postgresql://localhost:5435/webfluxdb
+    username: userdb
+    password: pwduserdb
+
   flyway:
     enabled: true
     url: jdbc:postgresql://localhost:5435/webfluxdb
     user: userdb
     password: pwduserdb
     baseline-version: 0
+
 
 server:
   port: 8081
