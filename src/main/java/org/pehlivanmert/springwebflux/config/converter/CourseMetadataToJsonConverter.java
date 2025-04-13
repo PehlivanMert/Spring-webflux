@@ -1,10 +1,10 @@
 package org.pehlivanmert.springwebflux.config.converter;
 
 
-import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import io.r2dbc.postgresql.codec.Json;
 import lombok.extern.slf4j.Slf4j;
+import org.pehlivanmert.springwebflux.modal.metadata.CourseMetadata;
 import org.springframework.core.convert.converter.Converter;
 import org.springframework.data.convert.WritingConverter;
 
@@ -30,4 +30,4 @@ public class CourseMetadataToJsonConverter implements Converter<CourseMetadata, 
         }
     }
 }
-}
+
